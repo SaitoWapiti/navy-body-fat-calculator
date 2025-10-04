@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "source": "Navy BCA / Marines MCO 6110.x",
+    "version": "2025-01",
+    "retrieved_at": "2025-10-05",
+    "notes": "公開資料を要約・反映（非公式）"
+  },
+  "presets": [
+    {
+      "id": "Navy_2025-01",
+      "service": "Navy",
+      "limits": [
+        {"sex":"male","ageMin":17,"ageMax":39,"limitPct":26},
+        {"sex":"male","ageMin":40,"ageMax":60,"limitPct":28},
+        {"sex":"female","ageMin":17,"ageMax":39,"limitPct":36},
+        {"sex":"female","ageMin":40,"ageMax":60,"limitPct":38}
+      ]
+    },
+    {
+      "id": "Marines_2025-01",
+      "service": "Marines",
+      "limits": [
+        {"sex":"male","ageMin":17,"ageMax":25,"limitPct":18},
+        {"sex":"male","ageMin":26,"ageMax":40,"limitPct":20},
+        {"sex":"female","ageMin":17,"ageMax":25,"limitPct":26},
+        {"sex":"female","ageMin":26,"ageMax":40,"limitPct":28}
+      ]
+    }
+  ]
+}

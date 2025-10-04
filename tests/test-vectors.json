@@ -1,0 +1,83 @@
+[
+  {
+    "name": "male_navy_pass",
+    "description": "男性、海軍基準で合格するケース",
+    "input": {
+      "sex": "male",
+      "age": 25,
+      "height": 175.0,
+      "neck": 38.0,
+      "waist": 80.0,
+      "unitLength": "metric"
+    },
+    "expected": {
+      "bodyFatPct_range": [15, 25],
+      "navy_pass": true,
+      "marines_pass": false
+    }
+  },
+  {
+    "name": "female_both_pass",
+    "description": "女性、両基準で合格するケース",
+    "input": {
+      "sex": "female",
+      "age": 20,
+      "height": 160.0,
+      "neck": 32.0,
+      "waist": 70.0,
+      "hip": 90.0,
+      "unitLength": "metric"
+    },
+    "expected": {
+      "bodyFatPct_range": [20, 30],
+      "navy_pass": true,
+      "marines_pass": true
+    }
+  },
+  {
+    "name": "boundary_age_test",
+    "description": "年齢境界値（39→40歳）のテスト",
+    "input": {
+      "sex": "male",
+      "age": 40,
+      "height": 180.0,
+      "neck": 40.0,
+      "waist": 90.0,
+      "unitLength": "metric"
+    },
+    "expected": {
+      "navy_limit_change": true,
+      "expected_navy_limit": 28
+    }
+  },
+  {
+    "name": "imperial_units_test",
+    "description": "インペリアル単位でのテスト",
+    "input": {
+      "sex": "male",
+      "age": 30,
+      "height": 70.0,
+      "neck": 15.0,
+      "waist": 32.0,
+      "unitLength": "imperial"
+    },
+    "expected": {
+      "bodyFatPct_range": [15, 25]
+    }
+  },
+  {
+    "name": "domain_boundary_test",
+    "description": "定義域境界のテスト（差分が小さい場合）",
+    "input": {
+      "sex": "male",
+      "age": 25,
+      "height": 175.0,
+      "neck": 38.0,
+      "waist": 39.0,
+      "unitLength": "metric"
+    },
+    "expected": {
+      "calculation_possible": true
+    }
+  }
+]
