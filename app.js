@@ -654,7 +654,7 @@ function generateShareContent(type) {
                ` 海兵隊基準: ${marinesStatus}\n\n` +
                `📐 Navy Method（テープ法）で測定\n` +
                `詳細な計算結果はこちら↓\n` +
-               `#体脂肪率 #NavyMethod #フィットネス #ボディメイク`;
+               `#体脂肪率 #NavyMethod`;
         
         // 全入力値をURLパラメータに含める
         const params = new URLSearchParams();
@@ -907,4 +907,5 @@ function shareWithNativeAPI(type) {
         return true;
     }
     return false;
+
 }
